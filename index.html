@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- Información -->
+	<meta 	name="name" 
+			content="dorota traveler, Dorota Traveler, DOROTA TRAVELER, dorota-traveler, Dorota-Traveler, DOROTA-TRAVELER">
+	<meta 
+			name="description" 
+			content="Dorota Traveler, es un juego web gratuito, is a free web game">
+	<meta 	name="keywords" 
+			content="dorota traveler, Dorota Traveler, DOROTA TRAVELER, dorota-traveler, Dorota-Traveler, DOROTA-TRAVELER, free web game, juego web gratis, free game, juego gratis, juego, game, videojuego, videogame, video juego, video game, web game, juego web,dorota, Dorota, DOROTA, Jorge Luis Jácome Domínguez, JORGE LUIS JACOME DOMINGUEZ, jorge luis jacome dominguez, Adrián García Colorado, adrián garcia colorado, ADRIAN GARCIA COLORADO, SOGE, soge, SOGE LAB, soge lab">
+	<meta 
+			name="author" 
+			content="Jorge Luis Jácome Domínguez, JORGE LUIS JACOME DOMINGUEZ, jorge luis jacome dominguez, Adrián García Colorado, adrián garcia colorado, ADRIAN GARCIA COLORADO, SOGE, soge, SOGE LAB, soge lab">
+	<meta 	name="clasification" content="game, juego, videojuego, videogame, video juego, video game, free game, juego gratis, free web game, juego web gratis, web game, juego web">
+	
+	<!-- LOGO -->
+	<link rel="shortcut icon" type="image/png" href="imgs/icons/dorota-icon.png">
+	<title>Dorota Traveler - Game</title>
+
+	<link rel="stylesheet" href="css/dorota-style.css"/>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.mobile-1.4.5.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/dorota-script.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body id="page-dorota-traveler">
+	<!-- Audio -->
+	<div>
+		<audio 
+			id="dorota-audio" 
+			loop="loop"
+			playsinline="true"
+			autoplay="autoplay" 
+			autobuffer>
+			<source src="music/your_call.mp3"  type="audio/mpeg">
+			<source src="music/your_call.ogg"  type="audio/ogg">
+			<source src="music/your_call.wav"  type="audio/wav">
+		</audio>
+		<button
+			id="dorota-button-audio"
+			onclick="audioPlayPause()">
+			<img src="imgs/dorota-button-audio-off.png" alt="">
+		</button>
+	</div>
+	<!-- PAGINA - VideoJuego -->
+	<div data-role="page" id="page-game">
+		<div data-role="content">
+			<!-- GUI fuera del Juego -->
+			<div class="dorota-gui-zone">
+				<!-- Boton Restart -->
+				<img class="dorota-button-restart" src="imgs/dorota-button-start-normal.png"/>
+				<!-- Contador de tiempo -->
+				<label class="dorota-count" id="dorota-count-time"></label>
+				<!-- -->
+				<label id="dorota-title-game">Dorota Traveler</label>
+				<!-- -->
+				<a 	href="#page-info"
+					data-role="button"
+					data-transition="Slide"
+					id="dorota-go-page-info" 
+					class="dorota-link dorota-link-info">
+					Information
+				</a>
+				<!-- License -->
+				<a 	id="dorota-license"
+					rel="license" 
+					href="http://creativecommons.org/licenses/by-nc/4.0/">
+					<img 
+						alt="Licencia de Creative Commons" 
+						style="border-width:0" 
+						src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+				</a>
+			</div>
+			<!-- Elementos del Juego -->
+			<div class="dorota-game-zone">
+				<!-- Player -->
+				<img class="dorota-player-shadow" src="imgs/dorota-player-shadow.png" hidden="true"/>
+				<img class="dorota-player" src="imgs/dorota-player.png" hidden="true"/>
+				<!-- Obstaculos -->
+				<img id="dorota-obstacle-1" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-2" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-3" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-4" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-5" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-6" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-7" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-8" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-9" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<img id="dorota-obstacle-10" class="dorota-obstacle" src="imgs/dorota-obstacle.png"/>
+				<!-- Contador de tiempo -->
+				<label class="dorota-count" id="dorota-count-time-game"></label>
+			</div>			
+			<!-- GUI dentro del Juego -->
+			<div class="dorota-gui-game-zone">
+			</div>
+		</div>
+	</div>
+	<!-- PAGINA - Instrucciones y Creditos -->
+	<div data-role="page" id="page-info" hidden="true">
+		<div data-role="content">
+			<!-- GUI fuera del Juego -->
+			<div class="dorota-text-nogame">
+				<a 	href="#page-game"
+					data-role="button"
+					data-transition="Back"
+					id="dorota-go-page-game"
+					class="dorota-link dorota-link-game"
+					>
+					GAME
+				</a>
+				<br/><br/>
+				<center>
+					<p>
+						<label><strong> Instructions Game </strong></label>
+						<p>Touch top on display or press key up to move player to up</p>
+						<p>Touch nether on display or press key down to move player to down</p>
+					</p>
+					<hr>
+					<p>
+						<label><strong> Credits </strong></label>
+						<p>
+							<label>Visual art:</label>
+							<p>
+							Jorge Luis Jácome Domínguez (leon.blanco@hotmail.com)
+							</p>
+							<label>Programming:</label>
+							<p>
+							Jorge Luis Jácome Domínguez (leon.blanco@hotmail.com),
+							Adrián García Colorado.
+							</p>
+							<label>Music:</label>
+							<p>
+							Your Call Kevin MacLeod (incompetech.com)
+							Licensed under Creative Commons: By Attribution 3.0 License
+							http://creativecommons.org/licenses/by/3.0/
+							</p>
+						</p>
+					</p>
+					<hr>
+					<p>
+						<label><strong>Legal Information</strong></label>
+						<p>
+							<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+								<img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+							</a>
+							<br />
+							<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">	Dorota Traveler
+							</span> 
+							by 
+							<a xmlns:cc="http://creativecommons.org/ns#" href="http://dorota-traveler.esy.es/" property="cc:attributionName" rel="cc:attributionURL">
+								Jorge Luis Jácome Domínguez, Adrián García Colorado </a> is licensed under a 
+							<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+								Creative Commons Reconocimiento-NoComercial 4.0 Internacional License
+							</a>.
+							<br />
+							Creado a partir de la obra en 
+							<a xmlns:dct="http://purl.org/dc/terms/" href="http://dorota-traveler.esy.es/" rel="dct:source">
+								http://dorota-traveler.esy.es/
+							</a>.
+						</p>
+					</p>
+				</center>
+			</div>
+		</div>		
+	</div>
+	
+</body>
+</html>

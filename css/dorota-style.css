@@ -1,0 +1,233 @@
+/* Fondo del Juego */
+.dorota-game-zone{
+	margin: 0rem;
+	padding: 0rem;
+	
+	background-image: url("../imgs/dorota-stage.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100%;
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0rem;
+	left: 0rem;
+	z-index: 0;
+}
+
+/* Player */
+img.dorota-player{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	/* max-width: 15%;*/
+	max-height: 5%;
+	left: 10%;
+	top: 40%;
+	z-index: 2;
+}
+img.dorota-player-shadow{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	/* max-width: 15%;*/
+	max-height: 5%;
+	left: 9%;
+	top: 40%;
+	z-index: 1;
+}
+
+/* Obstaculos */
+img.dorota-obstacle{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	/* max-width: 10%; */
+	max-height: 10%;
+	z-index: 2;
+	left: 100%;
+}
+img#dorota-obstacle-1{
+	top: 0%;
+}
+img#dorota-obstacle-2{
+	top: 10%;
+}
+img#dorota-obstacle-3{
+	top: 20%;
+}
+img#dorota-obstacle-4{
+	top: 30%;
+}
+img#dorota-obstacle-5{
+	top: 40%;
+}
+img#dorota-obstacle-6{
+	top: 50%;
+}
+img#dorota-obstacle-7{
+	top: 60%;
+}
+img#dorota-obstacle-8{
+	top: 70%;
+}
+img#dorota-obstacle-9{
+	top: 80%;
+}
+img#dorota-obstacle-10{
+	top: 90%;
+}
+
+/* GUI dentro del Juego */
+.dorota-gui-game-zone{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0rem;
+	left: 0rem;
+	z-index: 3;
+}
+
+/* GUI fuera del Juego */
+.dorota-gui-zone{
+	margin: 0rem;
+	padding: 0rem;
+	background: rgba(10,10,10,0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0rem;
+	left: 0rem;	
+	z-index: 4;
+}
+.dorota-button-restart{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	max-height: 225px;
+	height: 45%;
+	top: 25%;
+	left: 50%;
+  	transform: translateX(-50%);
+  	-webkit-transform: translateX(-50%);
+  	-ms-transform: translateX(-50%);
+}
+
+/* Contadores de tiempo en el Juego */
+.dorota-count{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	top: 2.5%;
+	left: 50%;
+  	transform: translateX(-50%);
+  	-webkit-transform: translateX(-50%);
+  	-ms-transform: translateX(-50%);	
+	
+	text-align: center;
+  	
+  	font-size: 175%;
+  	height: 22.5%;
+  	font-weight: bold;
+  	background-color: transparent;
+  	border: none;
+}
+#dorota-count-time{
+}
+#dorota-count-time-game{
+}
+
+/* Titulo */
+#dorota-title-game{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	top: 70%;
+	left: 50%;
+  	transform: translateX(-50%);
+  	-webkit-transform: translateX(-50%);
+  	-ms-transform: translateX(-50%);
+	
+	text-align: center;
+
+  	font-size: 275%;
+  	height: 27.5%;
+  	font-weight: bold;
+  	background-color: transparent;
+  	border: none;
+}
+/* Licensia */
+#dorota-license{
+	margin: 0rem;
+	padding: 0rem;
+	position: fixed;
+	top: 85%;
+	left: 50%;
+  	transform: translateX(-50%);
+  	-webkit-transform: translateX(-50%);
+  	-ms-transform: translateX(-50%);
+	
+	text-align: center;
+
+  	font-size: 275%;
+  	height: 27.5%;
+  	font-weight: bold;
+  	background-color: transparent;
+  	border: none;
+}
+
+/* CREDITOS e INSTRUCCIONES */
+.dorota-link{
+	margin: 0rem;
+	padding: 0rem;
+
+	margin-left: -3.5%;	
+	float: right;
+
+	color: black;
+  	font-size: 150%;
+  	font-weight: bold;
+  	background-color: transparent;
+  	border: none;
+}
+.dorota-link-info{
+	margin: 1.5%;
+	padding: 0rem;
+}
+.dorota-link-game{
+	margin-right: 1.5%;
+	margin-top: 0.5%;
+}
+.dorota-text-nogame{
+	margin: 0rem;
+	padding: 0rem;
+	width: 100%;
+}
+
+/* AUDIO */
+#dorota-button-audio{
+	margin: 1.5%;
+	padding: 0rem;
+	position: fixed;
+	width: 10%;
+	height: 10%;
+	min-width: 25px;
+	min-height: 25px;
+	max-width: 50px;
+	max-height: 50px;
+	top: 0rem;
+	left: 0rem;
+	z-index: 7;
+	background: none;
+}
+#dorota-button-audio>img{
+	min-width: 25px;
+	min-height: 25px;
+	max-width: 50px;
+	max-height: 50px;
+	width: 10%;
+	height: 10%;
+}
